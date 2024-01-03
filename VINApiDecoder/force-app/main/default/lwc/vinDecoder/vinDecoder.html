@@ -1,0 +1,14 @@
+<template>
+    <lightning-input label="VIN Number"
+                     value={vinNumber}
+                     onchange={handleVinChange}>
+    </lightning-input>
+    <lightning-button label="Find"
+                      onclick={handleSubmit}
+                      class="slds-var-m-top_small">
+    </lightning-button>
+    <!-- Отображение ошибки, если таковая имеется -->
+    <template if:true={error}>
+        <p class="error-message">Error: {error}</p>
+    </template>
+</template>
